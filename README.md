@@ -1,19 +1,62 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
   <img alt="delineate.io" src="https://github.com/delineateio/.github/blob/master/assets/logo.png?raw=true" height="75" />
   <h2 align="center">delineate.io</h2>
   <p align="center">portray or describe (something) precisely.</p>
+
+  <h3 align="center">Scheduled Cloud Functions</h3>
+
+  <p align="center">
+    Demonstrate using Terraform to provision scheduled cloud functions securely on Google Cloud
+    <br />
+    <a href="https://github.com/jf-delineate/scheduled-cloud-functions"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jf-delineate/scheduled-cloud-functions/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jf-delineate/scheduled-cloud-functions/issues">Request Feature</a>
+  </p>
 </p>
 
-# Scheduled Cloud Functions
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/delineateio/box/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+)
-
-## Purpose
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
 The purpose of this repo is to demonstrate scheduling cloud functions on Google Cloud Platform.
 
-Specifically this demonstrates the following combination of technologies:
+### Built With
 
 * [NodeJS](https://nodejs.org/en/) used as the language to implement the cloud function
 * [Google Functions Framework](https://github.com/GoogleCloudPlatform/functions-framework-nodejs) enabling  better developer workflow and simplifying local development
@@ -21,26 +64,18 @@ Specifically this demonstrates the following combination of technologies:
 * [Hashicorp Terraform](https://www.terraform.io/) used to provision cloud resources for the scheduled function
 * [Google Cloud Platform](https://cloud.google.com/gcp) used as the hosting platform for the cloud resources
 
-## Contributing
+<!-- GETTING STARTED -->
+## Getting Started
 
-Contributions to this project are welcome!
+To get a local copy up and running follow these simple steps.
 
-* [Contribution Guidelines](https://github.com/delineateio/.github/blob/master/CONTRIBUTING.md)
-* [Code of Conduct](https://github.com/delineateio/.github/blob/master/CODE_OF_CONDUCT.md)
+### Prerequisites
 
-Please note that [git commit signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) is required to contribute to this project.
-
-## High Level Approach
-
-* Basic Cloud Function implemented using nodejs
-* Use Cloud Functions Framework for local testing
-* Use Terraform to provision the function and scheduler
-
-## Prerequisites
+This is an example of how to list things you need to use the software and how to install them.
 
 > In future the GCP bootstrapping can be automated using a bootstrapping script to smooth setup.
 
-### GCP APIs
+#### GCP APIs
 
 Before running the `terraform` provisioning the following two Google Cloud APIs must be enabled:
 
@@ -54,7 +89,7 @@ When using `gcloud` with a correctly authenticated and permissioned the APIs can
 gcloud services enable "${SERVICE}" --async
 ```
 
-### Terraform Service Account
+#### Terraform Service Account
 
 Once the right APIs are enabled a service account for `terraform` needs to be created with the following roles:
 
@@ -69,9 +104,14 @@ Once the right APIs are enabled a service account for `terraform` needs to be cr
 * Storage Admin
 * Storage Object Admin
 
-### GCP Authentication
+### Installation
 
-Once the GCP service account is created then a `./box.yml` file can be created in the root of the project.  This is required to configure `gcloud` when the `vagrant` box is provisioned.
+```shell
+# clone the repo
+git clone https://github.com/jf-delineate/scheduled-cloud-functions.git
+```
+
+Once the repo is cloned create `./box.yml` in the root of the project.  This is required to configure `gcloud` when the `vagrant` box is provisioned.
 
 ```yml
 gcloud:
@@ -82,7 +122,10 @@ gcloud:
   zone:     # gcp_zone
 ```
 
-## Vagrant Box
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Vagrant Box
 
 Once the prerequisites are setup the `vagrant` box can be provisioned
 
@@ -98,26 +141,29 @@ box
 cd project && source ./ops/.env
 ```
 
-## Local Testing
+### Local Testing
 
 The below instructions can be used to run the function locally for testing purposes, you can find out more [here](https://github.com/GoogleCloudPlatform/functions-framework-nodejs#quickstart-set-up-a-new-project).  Additionally, you can find out more by watching the [Functions Framework](https://cloud.google.com/functions/docs/functions-framework) video.
 
 ```shell
-# start the function in the
+# navigate function
 cd ./dev
+
+# install and run the server
 npm init
 npm install @google-cloud/functions-framework
 npm start
 
-# from the host use your preferred tool (curl, httpie etc)
+# use preferred tool from host (curl, httpie etc)
 http :8080
 ```
 
-## Provisioning in GCP
+### Provisioning in GCP
 
 > It is important to note that some of the GCP resources are **eventually consistent**.  What this means in practice, is that if the scheduled job is immediately manually run from the console it sometimes fails.  However it stabilises after some time as proven by testing.
 
 ```shell
+# navigate to infra
 cd ./ops
 
 # initalises the modules
@@ -129,3 +175,47 @@ terraform apply
 # destroy the infrastructure (when required)
 terraform destroy
 ```
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/jf-delineate/scheduled-cloud-functions/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+If you would like to contribute to any Capco Digital OSS projects please read:
+
+* [Code of Conduct](https://github.com/jf-delineate/.github/blob/master/CODE_OF_CONDUCT.md)
+* [Contributing Guidelines](https://github.com/jf-delineate/.github/blob/master/CONTRIBUTING.md)
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
+[contributors-url]: https://github.com/jf-delineate/scheduled-cloud-functions/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
+[forks-url]: https://github.com/jf-delineate/scheduled-cloud-functions/network/members
+[stars-shield]: https://img.shields.io/github/stars/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
+[stars-url]: https://github.com/jf-delineate/scheduled-cloud-functions/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
+[issues-url]: https://github.com/jf-delineate/scheduled-cloud-functions/issues
+[license-shield]: https://img.shields.io/github/license/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
+[license-url]: https://github.com/jf-delineate/scheduled-cloud-functions/blob/master/LICENSE
