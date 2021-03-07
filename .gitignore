@@ -1,0 +1,12 @@
+# dirs
+_archive
+.vagrant
+.terraform
+.vscode
+node_modules/
+
+# files
+box.yml
+terraform.tfstate
+terraform.tfstate.backup
+package-lock.json
