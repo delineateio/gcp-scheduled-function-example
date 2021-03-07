@@ -75,6 +75,14 @@ This is an example of how to list things you need to use the software and how to
 
 > In future the GCP bootstrapping can be automated using a bootstrapping script to smooth setup.
 
+```shell
+# installs vagrant
+brew install --cask vagrant
+
+# installs httpie
+brew install httpie
+```
+
 #### GCP APIs
 
 Before running the `terraform` provisioning the following two Google Cloud APIs must be enabled:
