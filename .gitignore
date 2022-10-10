@@ -6,6 +6,7 @@ _archive
 node_modules/
 
 # files
+.DS_Store
 box.yml
 terraform.tfstate
 terraform.tfstate.backup
