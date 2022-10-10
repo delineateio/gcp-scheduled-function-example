@@ -2,22 +2,22 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/archive" {
-  version     = "2.1.0"
-  constraints = "2.1.0"
+  version     = "2.2.0"
+  constraints = "2.2.0"
   hashes = [
-    "h1:Rjd4bHMA69V+16tiriAUTW8vvqoljzNLmEaRBCgzpUs=",
-    "h1:f3WXKM/FBu5EMY6j2BGt982hzVMNicrxTyEAz5EsrOU=",
-    "zh:033279ecbf60f565303222e9a6d26b50fdebe43aa1c6e8f565f09bb64d67c3fd",
-    "zh:0af998e42eb421c92e87202df5bfee436b3cfe553214394f08d786c72a9e3f70",
-    "zh:1183b661c692f38409a61eefb5d412167c246fcd9e49d4d61d6d910012d206ba",
-    "zh:5febb66f4a8207117f71dcd460fb9c81d3afb7b600b5e598cf517cf6e27cf4b2",
-    "zh:66135ce46d29d0ccf0e3b6a119423754ca334dbf4266bc989cce5b0b667b5fde",
-    "zh:6b9dc1a4f0a680bb650a7191784927f99675a8c8dd3c155ba821185f630db604",
-    "zh:91e249482c016ecf6bf8b83849964005cd2d0b4396688419cd1752809b46b23e",
-    "zh:a6a2e5f2f010c511e66174cb84ea18899e8bcfc1354c4b9fed972fdb131ffffc",
-    "zh:bb1f6abc76552a883732caff897ff7b07a91977a9b4bb97915f6aac54116bb65",
-    "zh:f05a9a63607f85719fde705f58d82ee16fa67f9158a5c3424c0216507631eddf",
-    "zh:fc603a05a06814387ffa4a054d1baee8ea6b5ab32c53cb73e90a5bf9a2616777",
+    "h1:2K5LQkuWRS2YN1/YoNaHn9MAzjuTX8Gaqy6i8Mbfv8Y=",
+    "h1:CIWi5G6ob7p2wWoThRQbOB8AbmFlCzp7Ka81hR3cVp0=",
+    "zh:06bd875932288f235c16e2237142b493c2c2b6aba0e82e8c85068332a8d2a29e",
+    "zh:0c681b481372afcaefddacc7ccdf1d3bb3a0c0d4678a526bc8b02d0c331479bc",
+    "zh:100fc5b3fc01ea463533d7bbfb01cb7113947a969a4ec12e27f5b2be49884d6c",
+    "zh:55c0d7ddddbd0a46d57c51fcfa9b91f14eed081a45101dbfc7fd9d2278aa1403",
+    "zh:73a5dd68379119167934c48afa1101b09abad2deb436cd5c446733e705869d6b",
+    "zh:841fc4ac6dc3479981330974d44ad2341deada8a5ff9e3b1b4510702dfbdbed9",
+    "zh:91be62c9b41edb137f7f835491183628d484e9d6efa82fcb75cfa538c92791c5",
+    "zh:acd5f442bd88d67eb948b18dc2ed421c6c3faee62d3a12200e442bfff0aa7d8b",
+    "zh:ad5720da5524641ad718a565694821be5f61f68f1c3c5d2cfa24426b8e774bef",
+    "zh:e63f12ea938520b3f83634fc29da28d92eed5cfbc5cc8ca08281a6a9c36cca65",
+    "zh:f6542918faa115df46474a36aabb4c3899650bea036b5f8a5e296be6f8f25767",
   ]
 }
 
