@@ -1,0 +1,15 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/dev/hello"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "terraform"
+    directory: "/ops"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "terraform"
+    directory: "/ops/scheduled_job"
+    schedule:
+      interval: "weekly"
