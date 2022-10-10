@@ -133,22 +133,6 @@ gcloud:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Vagrant Box
-
-Once the prerequisites are setup the `vagrant` box can be provisioned
-
-```shell
-# creates the VM box
-vagrant up --provider virtualbox
-vagrant ssh
-
-# configure the box
-box
-
-# moves into the project and set the env vars
-cd project && source ./ops/.env
-```
-
 ### Local Testing
 
 The below instructions can be used to run the function locally for testing purposes, you can find out more [here](https://github.com/GoogleCloudPlatform/functions-framework-nodejs#quickstart-set-up-a-new-project).  Additionally, you can find out more by watching the [Functions Framework](https://cloud.google.com/functions/docs/functions-framework) video.
@@ -158,8 +142,7 @@ The below instructions can be used to run the function locally for testing purpo
 cd ./dev
 
 # install and run the server
-npm init
-npm install @google-cloud/functions-framework
+npm install
 npm start
 
 # use preferred tool from host (curl, httpie etc)

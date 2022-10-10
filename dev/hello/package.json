@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.1.2"
+    "@google-cloud/functions-framework": "^3.1.2",
+    "lodash": "^4.17.21"
   }
 }
