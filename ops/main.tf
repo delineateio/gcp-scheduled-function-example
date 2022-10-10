@@ -25,10 +25,15 @@ data "google_client_config" "context" {}
 # The bucket containing the functions
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket
 resource "google_storage_bucket" "function_storage" {
-  name          = "${data.google_client_config.context.project}-functions"
-  force_destroy = true
-}
+  name                        = "${data.google_client_config.context.project}-functions"
+  location                    = "EU"
+  uniform_bucket_level_access = true
+  force_destroy               = true
 
+  versioning {
+    enabled = true
+  }
+}
 
 # creates the hello job
 # ./job
