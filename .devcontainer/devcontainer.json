@@ -1,5 +1,5 @@
 {
-	"name": "Node.js",
+	"name": "GCP Scheduled Functions",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { "VARIANT": "16-bullseye" }
