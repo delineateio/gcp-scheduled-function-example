@@ -16,12 +16,12 @@
   <p align="center">
     Demonstrate using Terraform to provision scheduled cloud functions securely on Google Cloud
     <br />
-    <a href="https://github.com/jf-delineate/scheduled-cloud-functions"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/delineateio/scheduled-cloud-functions"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jf-delineate/scheduled-cloud-functions/issues">Report Bug</a>
+    <a href="https://github.com/delineateio/scheduled-cloud-functions/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jf-delineate/scheduled-cloud-functions/issues">Request Feature</a>
+    <a href="https://github.com/delineateio/scheduled-cloud-functions/issues">Request Feature</a>
   </p>
 </p>
 
@@ -116,7 +116,7 @@ Once the right APIs are enabled a service account for `terraform` needs to be cr
 
 ```shell
 # clone the repo
-git clone https://github.com/jf-delineate/scheduled-cloud-functions.git
+git clone https://github.com/delineateio/scheduled-cloud-functions.git
 ```
 
 Once the repo is cloned create `./box.yml` in the root of the project.  This is required to configure `gcloud` when the `vagrant` box is provisioned.
@@ -170,7 +170,7 @@ terraform destroy
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/jf-delineate/scheduled-cloud-functions/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/delineateio/scheduled-cloud-functions/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -185,8 +185,8 @@ Contributions are what make the open source community such an amazing place to b
 
 If you would like to contribute to any Capco Digital OSS projects please read:
 
-* [Code of Conduct](https://github.com/jf-delineate/.github/blob/master/CODE_OF_CONDUCT.md)
-* [Contributing Guidelines](https://github.com/jf-delineate/.github/blob/master/CONTRIBUTING.md)
+* [Code of Conduct](https://github.com/delineateio/.github/blob/master/CODE_OF_CONDUCT.md)
+* [Contributing Guidelines](https://github.com/delineateio/.github/blob/master/CONTRIBUTING.md)
 
 <!-- LICENSE -->
 ## License
@@ -200,13 +200,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
-[contributors-url]: https://github.com/jf-delineate/scheduled-cloud-functions/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
-[forks-url]: https://github.com/jf-delineate/scheduled-cloud-functions/network/members
-[stars-shield]: https://img.shields.io/github/stars/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
-[stars-url]: https://github.com/jf-delineate/scheduled-cloud-functions/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
-[issues-url]: https://github.com/jf-delineate/scheduled-cloud-functions/issues
-[license-shield]: https://img.shields.io/github/license/jf-delineate/scheduled-cloud-functions.svg?style=for-the-badge
-[license-url]: https://github.com/jf-delineate/scheduled-cloud-functions/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/delineateio/scheduled-cloud-functions.svg?style=for-the-badge
+[contributors-url]: https://github.com/delineateio/scheduled-cloud-functions/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/delineateio/scheduled-cloud-functions.svg?style=for-the-badge
+[forks-url]: https://github.com/delineateio/scheduled-cloud-functions/network/members
+[stars-shield]: https://img.shields.io/github/stars/delineateio/scheduled-cloud-functions.svg?style=for-the-badge
+[stars-url]: https://github.com/delineateio/scheduled-cloud-functions/stargazers
+[issues-shield]: https://img.shields.io/github/issues/delineateio/scheduled-cloud-functions.svg?style=for-the-badge
+[issues-url]: https://github.com/delineateio/scheduled-cloud-functions/issues
+[license-shield]: https://img.shields.io/github/license/delineateio/scheduled-cloud-functions.svg?style=for-the-badge
+[license-url]: https://github.com/delineateio/scheduled-cloud-functions/blob/master/LICENSE
