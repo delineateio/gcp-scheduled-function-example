@@ -4,7 +4,7 @@ ci:
 repos:
 
 - repo: https://github.com/gruntwork-io/pre-commit
-  rev: v0.1.17
+  rev: v0.1.22
   hooks:
     - id: terraform-fmt
       name: Lint Terraform
@@ -12,7 +12,7 @@ repos:
       name: Validate Terraform
 
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: v0.9.0.2
+  rev: v0.9.0.5
   hooks:
     - id: shellcheck
 
