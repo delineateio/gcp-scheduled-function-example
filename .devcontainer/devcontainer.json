@@ -8,7 +8,6 @@
 		"vscode": {
 			"extensions": [
 				"dbaeumer.vscode-eslint",
-				"snyk-security.snyk-vulnerability-scanner"
 			]
 		}
 	},
