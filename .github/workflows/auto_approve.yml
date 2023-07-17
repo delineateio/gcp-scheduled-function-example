@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: contains(fromJson('["*[bot]", "jf-delineate"]'), github.actor)
+    if: contains(fromJson('["dependabot[bot]", "pre-commit-ci", "jf-delineate"]'), github.actor)
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:
